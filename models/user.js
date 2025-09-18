@@ -31,9 +31,9 @@ const userSchema = new mongoose.Schema({
     required: true
   },
   institute: {
-    type: String,
-    required: true,
-    trim: true
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Institute",   // references the Institute model
+    required: true
   }
 }, { timestamps: true });
 

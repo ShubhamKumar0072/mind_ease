@@ -1,0 +1,51 @@
+<%- layout('layouts/boilerplate') %>
+<body>
+  <div class="container2">
+    <!-- LEFT SECTION -->
+    <section class="panel left-section">
+      <div class="avatar">
+        <% if (user && (user.profilePic || user.photo)) { %>
+          <img src="<%= user.profilePic || user.photo %>" alt="<%= user.name || 'User' %> avatar">
+        <% } else { %>
+          <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="24" height="24" rx="4" fill="#eaf3eb" />
+            <path d="M12 12a3 3 0 100-6 3 3 0 000 6z" fill="#9bbca8"/>
+            <path d="M4 20a7.5 7.5 0 0116 0H4z" fill="#cfe2d0"/>
+          </svg>
+        <% } %>
+      </div>
+      <div class="name"><%= user && user.name ? user.name : 'Unnamed User' %></div>
+    </section>
+
+    <!-- RIGHT UP SECTION -->
+    <section class="panel bottom-up">
+      <div class="kv"><div class="k">Email</div><div class="v"><%= user && user.email ? user.email : '-' %></div></div>
+      <div class="kv"><div class="k">DOB</div><div class="v"><%= user && user.DOB ? new Date(user.DOB).toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'}) : '-' %></div></div>
+      <div class="kv"><div class="k">Age</div><div class="v"><% if (user && user.DOB) { %><%= (function(d){ return Math.floor((new Date() - new Date(d)) / 31557600000); })(user.DOB) %> yrs<% } else { %>-<% } %></div></div>
+      <div class="kv"><div class="k">Account created</div><div class="v"><%= user && user.createdAt ? new Date(user.createdAt).toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'}) : '-' %></div></div>
+      <div class="kv"><div class="k">Last updated</div><div class="v"><%= user && user.updatedAt ? new Date(user.updatedAt).toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'}) : '-' %></div></div>
+    </section>
+
+    <!-- RIGHT DOWN SECTION -->
+    <section class="panel bottom-down">
+      <h3>Institute</h3>
+      <% if (user && user.institute) { %>
+        <div class="kv"><div class="k">Name</div><div class="v"><%= user.institute.name %></div></div>
+        <div class="kv"><div class="k">Address</div><div class="v"><%= user.institute.address %></div></div>
+        <div class="kv"><div class="k">Total students</div><div class="v"><%= user.institute.noOfStudents %></div></div>
+      <% } else { %>
+        <p class="muted">No institute linked.</p>
+      <% } %>
+
+      <h3 style="margin-top:20px">Mental Health Status</h3>
+      <% 
+        const stressLevel = "Moderate"; // Fake value
+        let details = "Maintains a balance but may feel pressure during exams.";
+        if(stressLevel === "Low") details = "Calm and relaxed, managing stress effectively.";
+        if(stressLevel === "High") details = "Experiencing high stress, needs immediate support.";
+      %>
+      <div class="kv"><div class="k">Stress Level</div><div class="v"><%= stressLevel %></div></div>
+      <div class="kv"><div class="k">Details</div><div class="v"><%= details %></div></div>
+    </section>
+  </div>
+</body>
