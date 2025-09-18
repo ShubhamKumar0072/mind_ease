@@ -1,6 +1,10 @@
 const mongoose = require("mongoose");
 
 const consultantSchema = new mongoose.Schema({
+  profile:{
+    type: String,
+    require: true
+  },
   name: {
     type: String,
     required: true,
@@ -39,6 +43,20 @@ const consultantSchema = new mongoose.Schema({
     type: String,
     required: true,
     trim: true
+  },
+  experties: {      
+    type: [String],
+    required: true,
+    trim: true
+  },
+  languages: {          
+    type: [String],
+    required: true,
+    trim: true
+  },
+  price: {
+    type: Number,
+    required: true
   }
 }, { timestamps: true });
 

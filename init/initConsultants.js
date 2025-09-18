@@ -12,58 +12,76 @@ async function initConsultants() {
     });
     console.log("✅ MongoDB connected");
 
-    const consultants = [
-      {
-        name: "Dr. Ananya Kapoor",
-        address: "12 Connaught Place, New Delhi",
-        phone: "9876543210",
-        email: "ananya.kapoor@example.com",
-        qualification: "PhD in Clinical Psychology",
-        experience: 10,
-        preWork: "Worked at AIIMS Delhi as a student counselor, specialized in stress management for college students",
-        specialization: "Psychologist - Student Mental Health"
-      },
-      {
-        name: "Rahul Sen",
-        address: "56 Ballygunge Road, Kolkata",
-        phone: "9123456780",
-        email: "rahul.sen@example.com",
-        qualification: "M.Phil in Counseling Psychology",
-        experience: 8,
-        preWork: "Provided therapy sessions at Presidency University for anxiety and depression among students",
-        specialization: "Psychologist - Student Mental Health"
-      },
-      {
-        name: "Dr. Meera Pillai",
-        address: "22 Anna Nagar, Chennai",
-        phone: "9988776655",
-        email: "meera.pillai@example.com",
-        qualification: "PhD in Child & Adolescent Psychology",
-        experience: 12,
-        preWork: "Served as mental health consultant at IIT Madras, focused on exam stress and peer pressure",
-        specialization: "Psychologist - Student Mental Health"
-      },
-      {
-        name: "Kavya Joshi",
-        address: "78 FC Road, Pune",
-        phone: "9090909090",
-        email: "kavya.joshi@example.com",
-        qualification: "M.Sc in Clinical Psychology",
-        experience: 6,
-        preWork: "Worked with NGOs conducting workshops on coping with failure and building self-confidence in students",
-        specialization: "Psychologist - Student Mental Health"
-      },
-      {
-        name: "Dr. Arvind Nair",
-        address: "34 MG Road, Bangalore",
-        phone: "9012345678",
-        email: "arvind.nair@example.com",
-        qualification: "PhD in Behavioral Psychology",
-        experience: 15,
-        preWork: "Senior counselor at NIMHANS, guided students with anxiety, addiction, and social adjustment issues",
-        specialization: "Psychologist - Student Mental Health"
-      }
-    ];
+const consultants = [
+  {
+    profile: "https://randomuser.me/api/portraits/men/32.jpg",
+    name: "Shubham Kumar",
+    address: "123 MG Road, Delhi, India",
+    phone: "9876543210",
+    email: "shubham.kumar@example.com",
+    qualification: "M.A. in Clinical Psychology",
+    experience: 6,
+    preWork: "AIIMS Delhi",
+    experties: ["Trauma-related", "Stress Management", "CBT"],
+    languages: ["Hindi", "English"],
+    price: 29
+  },
+  {
+    profile: "https://randomuser.me/api/portraits/women/45.jpg",
+    name: "Ananya Sharma",
+    address: "45 Park Street, Kolkata, India",
+    phone: "9123456789",
+    email: "ananya.sharma@example.com",
+    qualification: "Ph.D. in Counseling Psychology",
+    experience: 8,
+    preWork: "Fortis Healthcare",
+    experties: ["Anxiety Disorders", "Adolescent Therapy", "Family Counseling"],
+    languages: ["English", "Bengali", "Hindi"],
+    price: 35
+  },
+  {
+    profile: "https://randomuser.me/api/portraits/men/76.jpg",
+    name: "Rahul Mehta",
+    address: "78 Residency Road, Bengaluru, India",
+    phone: "9988776655",
+    email: "rahul.mehta@example.com",
+    qualification: "M.Phil in Clinical Psychology",
+    experience: 10,
+    preWork: "NIMHANS",
+    experties: ["Depression", "Addiction Recovery", "Cognitive Therapy"],
+    languages: ["English", "Kannada", "Hindi"],
+    price: 40
+  },
+  {
+    profile: "https://randomuser.me/api/portraits/women/60.jpg",
+    name: "Priya Nair",
+    address: "56 Marine Drive, Mumbai, India",
+    phone: "9098765432",
+    email: "priya.nair@example.com",
+    qualification: "M.A. in Applied Psychology",
+    experience: 5,
+    preWork: "Tata Memorial Hospital",
+    experties: ["Grief Counseling", "Workplace Stress", "Mindfulness"],
+    languages: ["English", "Malayalam", "Hindi"],
+    price: 27
+  },
+  {
+    profile: "https://randomuser.me/api/portraits/men/84.jpg",
+    name: "Arjun Verma",
+    address: "21 Civil Lines, Lucknow, India",
+    phone: "9345678123",
+    email: "arjun.verma@example.com",
+    qualification: "Ph.D. in Behavioral Psychology",
+    experience: 12,
+    preWork: "Apollo Hospitals",
+    experties: ["Behavioral Disorders", "Anger Management", "Couples Therapy"],
+    languages: ["Hindi", "English", "Urdu"],
+    price: 45
+  }
+];
+
+module.exports = consultants;
+
 
     // Clear old data and insert new
     await Consultant.deleteMany({});

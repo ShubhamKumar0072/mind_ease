@@ -33,11 +33,11 @@ app.get("/",(req,res)=>{
 });
 
 // Route to render all psychologists
-app.get("/psychologists", async (req, res) => {
+app.get("/booking", async (req, res) => {
   try {
     const psychologists = await Consultant.find();
-    res.send(psychologists);
-    //res.render("psychologists", { psychologists });
+    //res.send(psychologists);
+    res.render("pages/bookList.ejs", { psychologists });
   } catch (err) {
     res.status(500).send("Error fetching psychologists");
   }

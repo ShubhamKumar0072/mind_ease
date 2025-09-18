@@ -1,0 +1,26 @@
+<%- layout('layouts/boilerplate') %>
+    <div class="booking1">
+    <% psychologists.forEach(psy=> { %>
+        <div class="psyCard">
+            <div class="psyL">
+                <img src="<%= psy.profile %>" alt="">
+                <div>
+                    <h3>Experties : <%psy.experties.forEach(ele=> {%><span> <%= ele %> </span> <% }) %></h3>
+                    <h3>Speaks : <%psy.languages.forEach(ele=> {%><span> <%= ele %> </span> <% }) %> </h3>
+                </div>
+            </div>
+            <div class="psyR">
+                <div class="psy-detail">
+                    <h2> <%= psy.name %> </h2>
+                    <h3><%= psy.experience %>+ year of experiance</h3>
+                    <h3>₹<%= psy.price %> per hour</h3>
+                </div>
+                <div class="btns">
+                    <button>View Profile</button>
+                    <button>Book</button>
+                </div>
+            </div>
+
+        </div>
+    <% }); %>
+    </div>
