@@ -32,6 +32,10 @@ app.get("/",(req,res)=>{
     res.render("pages/home.ejs");
 });
 
+app.get("/comm",(req,res)=>{
+    res.render("pages/comm.ejs");
+});
+
 // Route to render all psychologists
 app.get("/booking", async (req, res) => {
   try {
@@ -44,15 +48,15 @@ app.get("/booking", async (req, res) => {
 });
 
 // Route to render detail of a particular psychologist by ID
-app.get("/psychologists/:id", async (req, res) => {
+app.get("/booking/:id", async (req, res) => {
   try {
-    const psychologist = await Consultant.findById(req.params.id);
+    const psy = await Consultant.findById(req.params.id);
 
-    if (!psychologist) {
+    if (!psy) {
       return res.status(404).send("Psychologist not found");
     }
-    res.send(psychologist);
-    //res.render("psychologistDetail", { psychologist });
+    //res.send(psychologist);
+    res.render("pages/book.ejs", { psy });
   } catch (err) {
     res.status(500).send("Error fetching psychologist details");
   }

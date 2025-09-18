@@ -12,7 +12,7 @@ nav {
     top: 0;
     left: 0;
     right: 0;
-    height: 70px; /* Adjust as needed */
+    height: 45px; /* Adjust as needed */
     background-color: #f2f2f2;
     display: flex;
     align-items: center;
@@ -39,8 +39,7 @@ nav {
 }
 
 .logo img {
-  width: 50px;
-  height: 50px;
+  width: 140px;
 }
 
 .logo h2 {
@@ -53,18 +52,18 @@ nav {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 15px;
 }
 
 .nav-links a {
   text-decoration: none;
-  padding: 10px 20px;
+  padding: 5px 4px;
   border: 1px solid #0a3d0a;
-  border-radius: 50px;
+  border-radius: 10px;
   background: #b6e5b6;
   color: #0a3d0a;
   font-weight: 500;
-  font-size: 25px;
+  font-size: 18px;
   transition: 0.3s;
 }
 
@@ -82,7 +81,7 @@ nav {
 /* Push content below navbar */
 .container {
     flex: 1;
-    padding: 100px 20px 20px; /* Top padding = navbar height + spacing */
+    padding: 55px 20px 20px; /* Top padding = navbar height + spacing */
 }
 
 /* Footer styling */
@@ -222,7 +221,7 @@ body {
   border-radius: 16px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   overflow: hidden;
-  max-width: 700px;
+  max-width: 600px;
   margin: 20px auto;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -266,7 +265,7 @@ body {
   font-size: 0.85rem;
   padding: 4px 10px;
   border-radius: 8px;
-  margin-left: 6px;
+  margin: 4px;
 }
 
 /* Right section */
@@ -279,7 +278,7 @@ body {
 }
 
 .psy-detail h2 {
-  font-size: 2.2rem;
+  font-size: 2.0rem;
   font-weight: 700;
   color: #1b4332; /* dark green */
   margin-bottom: 0.5rem;
@@ -295,9 +294,10 @@ body {
 }
 
 /* Buttons */
-.btns {
+.btns a {
   display: flex;
   flex-direction: column;
+  text-decoration: none;
   gap: 1rem;
   margin-top: 1.2rem;
 }
@@ -327,4 +327,224 @@ body {
 .btns button:nth-child(2):hover {
   background: #1b5e20;
 }
+
+/* Booking Page 2 --------------------------------------------------------------------- */
+
+.book {
+  max-width: 1000px;
+  margin: 10px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+/* Top section */
+.book-info {
+  display: flex;
+  align-items: flex-start;
+  padding: 2rem;
+  gap: 2rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Profile image */
+.book-info img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Details */
+.book-info > div {
+  flex: 1;
+}
+
+.book-info h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1b4332; /* dark green */
+  margin: 0;
+  margin-bottom: 1.6rem;
+  text-decoration: underline;
+}
+
+.book-info h2 {
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  color: #333;
+}
+
+.book-info h3 {
+  font-size: 1.1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #444;
+  margin: 1.1rem 0;
+  line-height: 1.4;
+}
+
+.book-info h4 {
+  font-size: 1.1rem;
+  text-align: left;
+  font-weight: 400;
+  color: #444;
+  margin: 1.1rem 0;
+  line-height: 1.4;
+}
+
+/* Expertise and Speaks spans */
+.book-info span {
+  display: inline-block;
+  background: #e5e7eb; /* light gray box */
+  color: #333;
+  font-size: 0.9rem;
+  padding: 4px 10px;
+  border-radius: 8px;
+  margin-left: 6px;
+}
+
+/* Contact info */
+.contact {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-left: 300px;
+}
+
+.contact p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #2e3b32;
+}
+
+.contact img {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  filter: invert(28%) sepia(20%) saturate(700%) hue-rotate(100deg) brightness(90%) contrast(90%);
+}
+
+/* Booking section */
+.book-shadule {
+  background: #C1E1C1; /* light green shade */
+  padding: 2rem;
+  border-radius: 0 0 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Section heading */
+.book-shadule h1 {
+  text-align: center;
+  font-size: 2.4rem;
+  text-decoration: underline;
+  font-weight: 700;
+  color: #1b4332; /* dark green */
+  margin-bottom: 0;
+}
+
+/* Sub sections */
+.book-date,
+.book-timing {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  text-align: left;
+}
+
+.book-date h2,
+.book-timing h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #2e3b32;
+  margin: 0;
+  margin-bottom: 0.3rem;
+}
+
+/* Input field */
+.book-date input[type="date"] {
+  padding: 10px 14px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background: #fff;
+  color: #333;
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+  width: 200px;
+}
+
+.book-date input[type="date"]:focus {
+  border-color: #1b4332;
+  box-shadow: 0 0 6px rgba(27, 67, 50, 0.3);
+}
+
+/* Time slots container */
+.book-time h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0.6rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+/* Time slot buttons */
+.book-time button {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  padding: 8px 14px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: #333;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.book-time button:hover {
+  border-color: #2d6a4f;
+  background: #f0fdf4;
+}
+
+/* Active (selected) slot */
+.book-time button.active {
+  background: #1b4332;
+  color: #fff;
+  border-color: #1b4332;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+/* Booking button */
+.booking {
+  align-self: center;
+  margin-top: 1rem;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: #1b4332; /* dark green */
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.booking:hover {
+  background: #14532d;
+  transform: translateY(-2px);
+}
+
 

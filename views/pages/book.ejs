@@ -1,0 +1,49 @@
+<%- layout('layouts/boilerplate') %>
+<div class="book">
+    <div class="book-info">
+        <img src=" <%= psy.profile %> " alt="">
+        <div>
+            <h1><%= psy.name %></h1>
+            <h2> <%= psy.qualification %> </h2>
+            <h2> <%= psy.experience %>+ year experience</h2>
+            <h3>Experties : <%psy.experties.forEach(ele=> {%><span> <%= ele %> </span> <% }) %></h3>
+            <h3>Speaks : <%psy.languages.forEach(ele=> {%><span> <%= ele %> </span> <% }) %> </h3>
+            <h4> <%= psy.preWork %> </h4>
+            <br>
+            <div class="contact">
+                <p><img src="/Utils/phoneicon.png" alt="">+91 <%= psy.phone %> </p>
+                <p><img src="/Utils/mailicon.png" alt=""> <%= psy.email %> </p>
+            </div>
+        </div>
+    </div>
+    <div class="book-shadule">
+
+        <h1>Book a Session</h1>
+        <div class="book-date">
+            <h2>Appointment Date </h2>
+            <input type="date" placeholder="select a Date">
+        </div>
+        <div class="book-timing">
+            <h2>Appointment Timing </h2>
+            <div class="book-time">
+                <h2>
+                    AM : 
+                    <button>08:00-09:00</button>
+                    <button>09:00-10:00</button>
+                    <button>10:00-11:00</button>
+                    <button>11:00-12:00</button>
+                </h2>
+                <h2>
+                    PM : 
+                    <button>02:00-03:00</button>
+                    <button>03:00-04:00</button>
+                    <button>04:00-05:00</button>
+                    <button>05:00-06:00</button>
+                </h2>
+            </div>
+        </div>    
+        
+        <button class="booking">Book a Apointment</button>
+
+    </div>
+</div>
