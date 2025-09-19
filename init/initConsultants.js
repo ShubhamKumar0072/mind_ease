@@ -14,11 +14,11 @@ async function initConsultants() {
 
 const consultants = [
   {
-    profile: "https://randomuser.me/api/portraits/men/32.jpg",
-    name: "Shubham Kumar",
+    profile: "/Utils/thp1.jpg",
+    name: "Dilip Kumar",
     address: "123 MG Road, Delhi, India",
     phone: "9876543210",
-    email: "shubham.kumar@example.com",
+    email: "dilipkumar@example.com",
     qualification: "M.A. in Clinical Psychology",
     experience: 6,
     preWork: "AIIMS Delhi",
@@ -27,7 +27,7 @@ const consultants = [
     price: 29
   },
   {
-    profile: "https://randomuser.me/api/portraits/women/45.jpg",
+    profile: "/Utils/thp2.jpg",
     name: "Ananya Sharma",
     address: "45 Park Street, Kolkata, India",
     phone: "9123456789",
@@ -40,7 +40,7 @@ const consultants = [
     price: 35
   },
   {
-    profile: "https://randomuser.me/api/portraits/men/76.jpg",
+    profile: "/Utils/thp3.jpg",
     name: "Rahul Mehta",
     address: "78 Residency Road, Bengaluru, India",
     phone: "9988776655",
@@ -53,7 +53,7 @@ const consultants = [
     price: 40
   },
   {
-    profile: "https://randomuser.me/api/portraits/women/60.jpg",
+    profile: "/Utils/thp5.jpg",
     name: "Priya Nair",
     address: "56 Marine Drive, Mumbai, India",
     phone: "9098765432",
@@ -66,7 +66,7 @@ const consultants = [
     price: 27
   },
   {
-    profile: "https://randomuser.me/api/portraits/men/84.jpg",
+    profile: "/Utils/thp4.jpg",
     name: "Arjun Verma",
     address: "21 Civil Lines, Lucknow, India",
     phone: "9345678123",

@@ -36,6 +36,10 @@ app.get("/comm",(req,res)=>{
     res.render("pages/comm.ejs");
 });
 
+app.get("/ganda",(req,res)=>{
+    res.render("pages/ganda.ejs");
+});
+
 // Route to render all psychologists
 app.get("/booking", async (req, res) => {
   try {

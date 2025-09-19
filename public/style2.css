@@ -1,3 +1,6 @@
+a{
+  text-decoration: none;
+}
 .home {
   font-family: Arial, sans-serif;
   background: #fff;
@@ -42,14 +45,21 @@
 }
 
 .option-box {
-  background: #45A452;
+  background: #a2e6ab;
   color: #03440E;
+  border: 2px solid #03440E;
   font-weight: bold;
   padding: 15px 25px;
   border-radius: 10px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.15);
   text-align: center;
   min-width: 160px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.option-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 /* ChatBot Section */
@@ -64,6 +74,12 @@
   margin: 0 auto;
   gap: 15px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chatbot:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 .chatbot-avatar img {
